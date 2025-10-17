@@ -7,10 +7,10 @@
     <link href="/src/global.css" rel="stylesheet" />
     <title>TODO DOM</title>
   </head>
-  <body>
-    <main class="w-full h-screen bg-[#62BBC1] px-50 py-20">
+  <body class="bg-[#62BBC1]">
+    <main class="w-full px-50 py-20">
       <section
-        class="flex flex-col bg-white rounded-sm p-2 shadow-md/10 shadow-[#30332E]"
+        class="flex flex-col px-10 py-5 bg-white rounded-sm shadow-md/10 shadow-[#30332E]"
       >
         <!-- title -->
         <div class="justify-center flex w-full">
@@ -19,7 +19,7 @@
         <!-- input -->
         <div class="w-full my-5">
           <h1>Masukan Deskripsi Tugas</h1>
-          <form onsubmit="">
+          <form id="todoForm">
             <div class="relative">
               <textarea
                 name="inputDeskripsi"
@@ -36,15 +36,26 @@
                 0/200
               </p>
             </div>
-            <button
-              type="submit"
-              class="p-2 bg-green-400 rounded-sm shadow-md/10 shadow-[#010400] my-2 font-bold text-white"
-            >
-              Tambah Tugas
-            </button>
+            <div class="flex justify-between">
+              <button
+                type="submit"
+                class="p-2 bg-green-400 rounded-sm shadow-md/10 shadow-[#010400] my-2 font-bold text-white"
+              >
+                Tambah Tugas
+              </button>
+              <button
+                id="deleteButton"
+                type="button"
+                class="p-2 bg-red-400 rounded-sm shadow-md/10 shadow-[#010400] my-2 font-bold text-white"
+              >
+                Hapus Semua
+              </button>
+            </div>
           </form>
         </div>
       </section>
+      <!-- list cards -->
+      <section id="listCards" class="my-5"></section>
     </main>
     <script type="module" src="src/main.js"></script>
   </body>
