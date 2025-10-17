@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/global.css" rel="stylesheet" />
+    <title>TODO DOM</title>
+  </head>
+  <body>
+    <main class="w-full h-screen bg-[#62BBC1] px-50 py-20">
+      <section
+        class="flex flex-col bg-white rounded-sm p-2 shadow-md/10 shadow-[#30332E]"
+      >
+        <!-- title -->
+        <div class="justify-center flex w-full">
+          <h1 class="font-bold text-3xl">Aplikasi ToDo - List</h1>
+        </div>
+        <!-- input -->
+        <div class="w-full my-5">
+          <h1>Masukan Deskripsi Tugas</h1>
+          <form onsubmit="">
+            <div class="relative">
+              <textarea
+                name="inputDeskripsi"
+                id="inputDeskripsi"
+                class="border border-gray-500 w-full h-30 p-1"
+                maxlength="200"
+                placeholder="masukan deskripsi tugas maksimal 200"
+                oninput="CounterWords('inputDeskripsi','counterWords')"
+              ></textarea>
+              <p
+                id="counterWords"
+                class="absolute text-gray-500 bottom-3 right-5 select-none"
+              >
+                0/200
+              </p>
+            </div>
+            <button
+              type="submit"
+              class="p-2 bg-green-400 rounded-sm shadow-md/10 shadow-[#010400] my-2 font-bold text-white"
+            >
+              Tambah Tugas
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
